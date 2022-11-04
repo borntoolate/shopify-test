@@ -1,0 +1,36 @@
+// basis.scssで読むものだけ有効にする
+
+// a
+// @use 'aaaa';
+// b
+// c
+// d
+// e
+// f
+// g
+// @use 'gNav';
+// h
+// i
+// j
+// k
+// l
+@use 'list';
+// m
+// n
+// o
+@use 'orderedList';
+// p
+// q
+// r
+// s
+@use 'selectBox';
+@use 'submitBtn';
+// t
+@use 'txtArea';
+@use 'txtBox';
+// u
+// v
+// w
+// x
+// y
+// z

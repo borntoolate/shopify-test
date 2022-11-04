@@ -1,0 +1,18 @@
+/* ****************************************************************************************************
+
+  # fontFamily
+  - foundation > mixin
+
+**************************************************************************************************** */
+@use 'foundation/variable/typography' as g;
+
+@mixin fontFamilySerif($weight: g.$fontWeightNormal) {
+  font-family : g.$fontFamilySerif;
+  font-weight : $weight;
+}
+
+// 英数字
+@mixin fontFamilyAlphaNumeric($weight: g.$fontWeightNormal) {
+  font-family : g.$fontFamilyAlphaNumeric;
+  font-weight : $weight;
+}

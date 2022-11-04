@@ -1,0 +1,40 @@
+/* ****************************************************************************************************
+
+  # typography
+  - foundation > variable > base
+
+**************************************************************************************************** */
+@use "../function/getRem" as gr;
+/* ======================================================================
+
+  ## fontFamily
+
+====================================================================== */
+$fontFamily: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', meiryo, sans-serif;
+$fontFamilySerif: 'Zen Old Mincho', 'YuMincho', 'Yu Mincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif;
+$fontFamilyAlphaNumeric: 'Josefin Sans', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', meiryo, sans-serif;
+/* ======================================================================
+
+  ## 行間
+
+====================================================================== */
+$lineHeight: 1.6;
+/* ======================================================================
+
+  ## 太さ
+
+====================================================================== */
+$fontWeightThin: 100;
+$fontWeightXLight: 200;
+$fontWeightLight: 300;
+$fontWeightNormal: 400;
+$fontWeightMed: 500;
+$fontWeightBold: 700;
+$fontWeightBlack: 900;
+/* ======================================================================
+
+  ## 大きさ
+
+====================================================================== */
+$fontSize: gr.getRem(16);
+$fontSizeMqMaxMd: gr.getRem(14);

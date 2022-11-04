@@ -1,0 +1,59 @@
+/* ****************************************************************************************************
+
+  # easing
+  - foundation > variable > base
+
+**************************************************************************************************** */
+// `transition-timing-function`と`animation-timing-function`プロパティに指定する
+// https://matthewlein.com/ceaser/
+// https://ics.media/entry/18730/
+// * linear - 一定の速度で変化する
+// * ease - 開始時から急速に加速して、中盤から緩やかになる
+// * ease-in - 緩やかに始まり、次第に加速し、突然停止する
+// * ease-in-out - 緩やかに始まり、加速が緩やかになっていく
+// * ease-out - 急速に始まり、次第に緩やかになっていく
+// * Sine < Quad < Cubic < Quart < Quint < Expoの順で性格が強くなる
+// * Circ： Expoのような強さを持つが、加速や減速の時間がよりゆるやか。
+// * Back： 少し行き過ぎてから戻ってくるような動き。
+// * Elastic： バネを離した時の往復するような動き。
+// * Bounce： ボールが跳ねるような跳ね返りの動き。
+
+// transition: .48s cubic-bezier(0.645,.045,.355,1);
+
+$linear: cubic-bezier(.25, .25, .75, .75) !default;
+$ease: cubic-bezier(.25, .1, .25, 1) !default;
+
+// ease-in
+$easeIn: cubic-bezier(.42, 0, 1, 1) !default;
+$easeInQuad: cubic-bezier(.55, .085, .68, .53) !default;
+$easeInCubic: cubic-bezier(.55, .055, .675, .19) !default;
+$easeInQuart: cubic-bezier(.895, .03, .685, .22) !default;
+$easeInQuint: cubic-bezier(.755, .05, .855, .06) !default;
+$easeInSine: cubic-bezier(.47, 0, .745, .715) !default;
+$easeInExpo: cubic-bezier(.95, .05, .795, .035) !default;
+$easeInCirc: cubic-bezier(.6, .04, .98, .335) !default;
+$easeInBack: cubic-bezier(.6, -.28, .735, .045) !default;
+
+// ease-out
+$easeOut: cubic-bezier(0, 0, .58, 1) !default;
+$easeOutQuad: cubic-bezier(.25, .46, .45, .94) !default;
+$easeOutCubic: cubic-bezier(.215, .61, .355, 1) !default;
+$easeOutQuart: cubic-bezier(.165, .84, .44, 1) !default;
+$easeOutQuint: cubic-bezier(.23, 1, .32, 1) !default;
+$easeOutSine: cubic-bezier(.39, .575, .565, 1) !default;
+$easeOutExpo: cubic-bezier(.19, 1, .22, 1) !default;
+$easeOutCirc: cubic-bezier(.075, .82, .165, 1) !default;
+$easeOutBack: cubic-bezier(.175, .885, .32, 1.275) !default;
+
+// ease-in-out
+$easeInOut: cubic-bezier(.42, 0, .58, 1) !default;
+$easeInOutQuad: cubic-bezier(.455, .03, .515, .955) !default;
+$easeInOutCubic: cubic-bezier(.645, .045, .355, 1) !default;
+$easeInOutQuart: cubic-bezier(.77, 0, .175, 1) !default;
+$easeInOutQuint: cubic-bezier(.86, 0, .07, 1) !default;
+$easeInOutSine: cubic-bezier(.445, .05, .55, .95) !default;
+$easeInOutExpo: cubic-bezier(1, 0, 0, 1) !default;
+$easeInOutCirc: cubic-bezier(.785, .135, .15, .86) !default;
+$easeInOutBack: cubic-bezier(.68, -.55, .265, 1.55) !default;
+$easeOutCustom: cubic-bezier(.645, .045, .355, 1);
+$easeInCustom: cubic-bezier(.17, .84, .44, 1);

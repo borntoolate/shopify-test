@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+	//"sourceMap": true,
+	"target": "es2015",
+	"module": "commonjs",
+	"noEmit": true,
+	"strict": true,
+	//"allowJs": true,
+	"noImplicitAny": false,
+	"jsx": "preserve",
+	"resolveJsonModule": true,
+	//"isolatedModules": true,
+	//"forceConsistentCasingInFileNames": true,
+	//"skipLibCheck": true,
+	"esModuleInterop": true,
+	"lib": ["dom", "dom.iterable", "esnext"],
+	"baseUrl": "./",
+	"typeRoots": [
+		"node_modules/@types",
+		"./src/scripts/types"
+	],
+	"paths": {
+		"@/*": [
+		"./src/scripts/*"
+		]
+	}
+	},
+	"exclude": ["node_modules"]
+}

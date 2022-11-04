@@ -1,0 +1,21 @@
+/* ****************************************************************************************************
+
+  # getVw
+  - foundation > function
+  - 第一引数でvwに変換したいピクセルの値、第二引数で基準となる画面幅を入力
+
+**************************************************************************************************** */
+@use "sass:math";
+
+@function getVw($size, $viewport: 375, $unit: true) {
+  $rate: math.div(100, $viewport);
+  @if $unit {
+    @return $rate * $size * 1vw;
+  } @else {
+    @return $rate * $size;
+  }
+}
+
+// @mixin fz-vw($fontSize: 14) {
+//   font-size: getVw($fontSize);
+// }

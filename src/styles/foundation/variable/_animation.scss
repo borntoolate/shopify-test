@@ -1,0 +1,65 @@
+/* ****************************************************************************************************
+
+  # animation
+  - foundation > variable > base
+
+**************************************************************************************************** */
+@use "foundation/function/getRem" as gr;
+
+$opacity: .7 !default;
+$transitionDuration: .3s !default;
+$transitionTimingFunction: ease !default;
+
+@keyframes modalFadeIn {
+
+  from {
+    opacity : 0;
+  }
+
+  to {
+    opacity : 1;
+  }
+}
+
+@keyframes modalFadeOut {
+
+  from {
+    opacity : 1;
+  }
+
+  to {
+    opacity : 0;
+  }
+}
+
+@keyframes modalSlideIn {
+
+  from {
+    transform : translateY(10%);
+  }
+
+  to {
+    transform : translateY(0);
+  }
+}
+
+@keyframes modalSlideOut {
+
+  from {
+    transform : translateY(0);
+  }
+
+  to {
+    transform : translateY(-10%);
+  }
+}
+
+@keyframes mainVisualZoom {
+  from {
+      transform: scale(1);
+  }
+
+  to {
+      transform: scale(1.1);
+  }
+}

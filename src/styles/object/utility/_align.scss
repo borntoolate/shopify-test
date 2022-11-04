@@ -1,0 +1,24 @@
+/* ****************************************************************************************************
+
+  # align
+  - utility
+
+**************************************************************************************************** */
+
+.u-alignLeft {
+  display : block !important;
+  margin-left : 0 !important;
+  margin-right : auto !important;
+}
+
+.u-alignCenter {
+  display : block !important;
+  margin-left : auto !important;
+  margin-right : auto !important;
+}
+
+.u-alignRight {
+  display : block !important;
+  margin-left : auto !important;
+  margin-right : 0 !important;
+}

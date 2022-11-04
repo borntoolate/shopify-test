@@ -1,0 +1,28 @@
+@use "global" as g;
+
+:root {
+  --font-body-family: #{g.$fontFamilySerif};
+  --font-body-style: normal;
+  --font-body-weight: #{g.$fontWeightNormal};
+  --font-heading-family: #{g.$fontFamilySerif};
+  --font-heading-style: normal;
+  --font-heading-weight: #{g.$fontWeightNormal};
+}
+
+html {
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// グローバルナビ展開時にbodyに付与されるクラス
+.overflow-hidden-tablet {
+  @include g.mq(mdMin) {
+    overflow: hidden !important;
+  }
+}
+
+*:focus-visible {
+  outline: none;
+  outline-offset: 0;
+  box-shadow: 0px g.getRemByOneTenth(9) g.getRemByOneTenth(24) g.getRemByOneTenth(-22) rgba(0, 0, 0, 0.6);
+}

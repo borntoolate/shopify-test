@@ -1,0 +1,31 @@
+/* ****************************************************************************************************
+
+  # txtAlign
+  - utility
+
+**************************************************************************************************** */
+@use 'global' as g;
+
+.u-txtAlignRight {
+  text-align : right !important;
+}
+
+.u-txtAlignCenter {
+  text-align : center !important;
+}
+
+.u-txtAlignLeft {
+  text-align : left !important;
+}
+
+.u-txtAlignCenterMqMinLg {
+  @include g.mq(lgMin) {
+    text-align : center !important;
+  }
+}
+
+.u-txtAlignCenterMqMinMd {
+  @include g.mq(mdMin) {
+    text-align : center !important;
+  }
+}

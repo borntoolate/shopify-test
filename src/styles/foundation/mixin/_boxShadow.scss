@@ -1,0 +1,32 @@
+/* ****************************************************************************************************
+
+  # boxShadow
+  - foundation > mixin
+
+**************************************************************************************************** */
+@use "foundation/variable/color" as clr;
+@use "foundation/variable/animation" as anim;
+@use "foundation/mixin/mediaQuery" as mq;
+@use "foundation/function/getRem" as gr;
+
+@mixin boxShadow($color: clr.$colorTxt, $hasHoverAnim: true) {
+  box-shadow : 3px 3px 0px 0px $color;
+  @if $hasHoverAnim {
+    @include mq.mq(mdMin) {
+      transition : box-shadow .25s anim.$transitionTimingFunction,
+        border-width .25s anim.$transitionTimingFunction,
+        border-radius .25s anim.$transitionTimingFunction,
+        transform .25s anim.$transitionTimingFunction;
+
+      &:hover {
+        border-radius : 0;
+        border-width : 0;
+        box-shadow : 0 0 0 0 clr.$colorTxt;
+        transform : translate(gr.getRem(2), gr.getRem(2));
+      }
+    }
+  }
+  @include mq.mq(md) {
+    box-shadow : 2px 2px 0px 0px $color;
+  }
+}

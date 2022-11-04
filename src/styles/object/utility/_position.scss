@@ -1,0 +1,26 @@
+/* ****************************************************************************************************
+
+  # position
+  - utility
+
+**************************************************************************************************** */
+
+.u-positionStatic {
+  position: static !important;
+}
+
+.u-positionRelative {
+  position: relative !important;
+}
+
+.u-positionAbsolute {
+  position: absolute !important;
+}
+
+.u-positionFixed {
+  position: fixed !important;
+}
+
+.u-positionSticky {
+  position: sticky !important;
+}

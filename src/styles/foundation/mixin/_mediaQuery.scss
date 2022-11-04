@@ -1,0 +1,45 @@
+/* ****************************************************************************************************
+
+  # mediaQuery
+  - foundation > mixin
+
+**************************************************************************************************** */
+@use 'foundation/variable/breakpoint' as bp;
+@use 'sass:map';
+
+@mixin mq($key: md) {
+  @media #{map.get( bp.$breakpoints, $key )} {
+    @content;
+  }
+}
+
+@mixin manualMq($breakPoint: 768) {
+  @media screen and (max-width: #{$breakPoint * 1px}) {
+    @content;
+  }
+}
+
+@mixin manualMqMin($breakPoint: 769) {
+  @media screen and (min-width: #{$breakPoint * 1px}) {
+    @content;
+  }
+}
+/*
+hoge {
+  // pc
+  prop: val;
+
+  // default media query
+  @media screen and ( max-width : 1080px ) {
+    prop: val;
+  }
+  // mixin mq
+  @include g.mq(md) {
+    prop: val;
+  }
+  // mixin manualMq
+  @include g.manualMq(768) {
+    prop: val;
+  }
+}
+*/

@@ -1,0 +1,26 @@
+/* ****************************************************************************************************
+
+  # list
+  - project
+
+**************************************************************************************************** */
+@use "global" as g;
+
+.p-list {
+  $this: &;
+
+  display: block;
+  list-style-type: disc;
+  font-size: g.getRemByOneTenth(14);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0 0 0 1.2em;
+
+  &__item {
+    display: list-item;
+    & + & {
+      margin-top: g.getRemByOneTenth(4);
+    }
+  }
+
+}

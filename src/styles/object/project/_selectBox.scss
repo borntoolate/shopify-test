@@ -1,0 +1,78 @@
+/* ****************************************************************************************************
+
+  # selectBox
+  - component
+
+**************************************************************************************************** */
+@use "global" as g;
+
+.p-selectBox {
+  display : block;
+  position : relative;
+  &::after {
+    content : "";
+    display : block;
+    height : 0;
+    right : g.getRemByOneTenth(14);
+    position : absolute;
+    top : 50%;
+    transform : translate(0, -50%);
+    width : 0;
+    z-index: 1;
+    pointer-events: none;
+    border-top: 8px solid g.$colorTxt;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+  }
+  /* ### mq
+  ---------------------------------------------------------------------- */
+  @include g.mq(mdMin) {
+    max-width: g.getRemByOneTenth(460) * 1.125;
+    &::after {
+      right : g.getRemByOneTenth(14);
+      border-top-width: g.getRemByOneTenth(10);
+      border-right-width: 9px;
+      border-left-width: 9px;
+    }
+  }
+
+  &__item {
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    appearance : none;
+    background : none;
+    text-indent : .01px;
+    vertical-align : middle;
+    border: 1px solid g.$colorTxt;
+    background-color: g.$colorWhite;
+    padding : g.getRemByOneTenth(10) g.getRemByOneTenth(36) g.getRemByOneTenth(10) g.getRemByOneTenth(12);
+    width : 100%;
+    height: g.getRemByOneTenth(44);
+    z-index: 0;
+    cursor: pointer;
+    font-size: g.getRemByOneTenth(16);
+    font-family: g.$fontFamilySerif;
+    color: g.$colorTxt;
+    &:focus {
+      border-color : g.$colorTxt;
+    }
+    option {
+      background-color : g.$colorWhite;
+      color : g.$colorTxt;
+    }
+    &::-ms-expand {
+      display : none;
+    }
+    &:-moz-focusring {
+      color : g.$colorTxt;
+      text-shadow : none;
+    }
+    /* ### mq
+    ---------------------------------------------------------------------- */
+    @include g.mq(mdMin) {
+      padding: g.getRemByOneTenth(4) g.getRemByOneTenth(38) g.getRemByOneTenth(4) g.getRemByOneTenth(12);
+      height: g.getRemByOneTenth(46);
+      font-size: g.getRemByOneTenth(14);
+    }
+  }
+}

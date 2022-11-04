@@ -1,0 +1,35 @@
+/* ****************************************************************************************************
+
+  # contentWidth
+  - foundation > mixin
+  - コンテンツの横幅を設定
+
+**************************************************************************************************** */
+@use 'foundation/variable/layout' as lyt;
+@use 'foundation/mixin/mediaQuery' as mq;
+@use "foundation/function/getRem" as gr;
+
+@mixin contentWidth($type: normal, $typeMqMaxMd: normal) {
+
+  $width: lyt.$contentWidth * 1vw;
+  $limit: lyt.$contentWidthLimitRem * 1.125;
+  $widthMqMaxMd: lyt.$contentWidthMqMaxMd * 1vw;
+  @if $type == lg {
+    $limit: lyt.$contentWidthLimitLgRem * 1.125;
+  } @else if $type == sm {
+    $limit: lyt.$contentWidthLimitSmRem * 1.125;
+  }
+  @if $typeMqMaxMd == sm {
+    $widthMqMaxMd: lyt.$contentWidthSmMqMaxMd * 1vw;
+  }
+
+  width: $widthMqMaxMd;
+  margin: 0 auto;
+  /* ### mq
+  ---------------------------------------------------------------------- */
+  @include mq.mq(mdMin) {
+    width: $width;
+    max-width: $limit;
+  }
+
+}

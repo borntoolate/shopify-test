@@ -1,0 +1,52 @@
+/* ****************************************************************************************************
+
+  # txtBox
+  - project
+
+**************************************************************************************************** */
+@use "global" as g;
+
+.p-txtBox {
+  $this: &;
+
+  /* ======================================================================
+
+    ## input
+
+  ====================================================================== */
+  &__input {
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    appearance : none;
+    outline : none;
+    background-color: g.$colorWhite;
+    width: 100%;
+    padding: g.getRemByOneTenth(10) g.getRemByOneTenth(12);
+    height: g.getRemByOneTenth(44);
+    border: 1px solid g.$colorTxt;
+    font-size: g.getRemByOneTenth(16);
+    font-family: g.$fontFamilySerif;
+    color: g.$colorTxt;
+    &::placeholder {
+      color : #B9B9B9;
+    }
+    &::-webkit-input-placeholder {
+      padding-top : g.getRemByOneTenth(2);
+    }
+    &::-ms-input-placeholder {
+      color : #B9B9B9;
+    }
+    &:-ms-input-placeholder {
+      color : #B9B9B9;
+    }
+
+    /* ### mq
+    ---------------------------------------------------------------------- */
+    @include g.mq(mdMin) {
+      max-width: g.getRemByOneTenth(460) * 1.125;
+      height: g.getRemByOneTenth(42);
+      padding: g.getRemByOneTenth(4) g.getRemByOneTenth(12);
+      font-size: g.getRemByOneTenth(14);
+    }
+  }
+}

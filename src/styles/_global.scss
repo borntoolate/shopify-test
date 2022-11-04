@@ -1,0 +1,13 @@
+/* ****************************************************************************************************
+
+  # global
+  - foundation > tools
+  - サイトの全体で使用するような汎用的なライブラリ(関数やMixins集)を
+    「foundation/tool/_global.scss」の中で「@forward」を使用して設定する
+
+**************************************************************************************************** */
+@forward 'sass:math';
+
+@forward 'foundation/function';
+@forward 'foundation/variable';
+@forward 'foundation/mixin';

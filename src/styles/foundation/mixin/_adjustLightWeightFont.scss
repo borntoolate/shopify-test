@@ -1,0 +1,15 @@
+/* ****************************************************************************************************
+
+  # adjustLightWeightFont
+  - foundation > mixin
+
+**************************************************************************************************** */
+@use 'foundation/variable/typography' as g;
+
+@mixin adjustLightWeightFont($weight: g.$fontWeightLight) {
+  font-weight: g.$fontWeightLight;
+  @at-root body:not(.safari) & {
+    -webkit-font-smoothing : auto;
+    -moz-osx-font-smoothing: auto;
+  }
+}

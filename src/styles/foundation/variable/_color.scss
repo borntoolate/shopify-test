@@ -1,0 +1,54 @@
+/* ****************************************************************************************************
+
+  # color
+  - foundation > variable
+
+**************************************************************************************************** */
+
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorGray: gray !default;
+$colorGrayLight: lightgray !default;
+$colorGrayDark: dimgray !default;
+/* 赤
+---------------------------------------------------------------------- */
+$colorRed: red !default;
+/* 黄
+---------------------------------------------------------------------- */
+$colorYellow: yellow !default;
+/* 青
+---------------------------------------------------------------------- */
+$colorBlue: blue !default;
+/* 緑
+---------------------------------------------------------------------- */
+$colorGreen: #23AD7B !default;
+/* ### primary 未使用
+---------------------------------------------------------------------- */
+$colorPrimary: #00233C;
+/* ### primary light 未使用
+---------------------------------------------------------------------- */
+$colorPrimaryLight: #274D69;
+/* ### primary variant 未使用
+---------------------------------------------------------------------- */
+$colorSecondary: #A0C3DC;
+/* ### primary variant light 未使用
+---------------------------------------------------------------------- */
+$colorSecondaryLight: #E2ECFA;
+/* ### accent
+---------------------------------------------------------------------- */
+$colorAccent: #F2F1EC;
+/* txt
+---------------------------------------------------------------------- */
+$colorTxt: #2E2F31 !default;
+$colorTxtDark: #3B4043 !default;// 未使用
+$colorTxtLight: $colorGrayDark !default;// 未使用
+$colorLink: $colorTxt !default;
+$colorLinkHover: $colorTxt !default;
+/* border
+---------------------------------------------------------------------- */
+$colorBorder: gray !default;// 未使用
+$colorBorderDark: $colorTxt !default;
+/* input系
+---------------------------------------------------------------------- */
+$colorInputBg: $colorWhite !default;
+$colorPlaceholder: #B9B9B9 !default;

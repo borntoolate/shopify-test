@@ -1,0 +1,21 @@
+/* ****************************************************************************************************
+
+  # zIndex
+  - foundation > variable
+
+**************************************************************************************************** */
+$zindexLoading: 258;
+$zindexModalLayer: 257;
+$zindexHeader: 256;
+$zindexGnav: 255;
+
+// 値が比較しづらいz-indexをMap型で一括管理する
+// 参考 https://book2.scss.jp/code/c5/02.html
+// mixinで使用 → /foundation/mixin/_z-index
+$stackingOrder: (
+  loading: 258,
+  modalLayer: 257,
+  header: 256,
+  gNav: 255,
+  fixedBtn: 253
+);

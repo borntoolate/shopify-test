@@ -1,0 +1,50 @@
+/* ****************************************************************************************************
+
+  # fittedImage
+  - foundation > mixin
+  - padding-topでアスペクト比維持の画像
+
+**************************************************************************************************** */
+@use 'sass:math';
+
+@mixin fittedImage(
+  $width: 100%,
+  $ratioWidth,
+  $ratioHeight,
+  $objectFitCover: false,
+  $position: relative
+) {
+  display : block;
+  height : auto;
+  position : $position;
+  width : $width;
+
+  &::after {
+    content : "";
+    display : block;
+    height : auto;
+    left : 0;
+    padding-top : math.div($ratioHeight, $ratioWidth) * 100%;
+    position : relative;
+    top : 0;
+    width : 100%;
+    z-index : 0;
+  }
+
+  img,
+  svg {
+    display : block;
+    left : 50%;
+    position : absolute;
+    top : 50%;
+    transform : translate(-50%, -50%);
+    width : 100%;
+    z-index : 1;
+    @if $objectFitCover {
+      height : 100%;
+      object-fit : cover;
+    } @else {
+      height : auto;
+    }
+  }
+}

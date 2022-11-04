@@ -1,0 +1,16 @@
+/* ****************************************************************************************************
+
+  # appearUp
+  - foundation > mixin
+
+**************************************************************************************************** */
+
+@mixin appearUp(
+  $transformValue: translateY(220%),
+  $transitionTime: .8s,
+  $transitionProperty: transform
+) {
+  transform : $transformValue;
+  transition : $transitionProperty $transitionTime
+    cubic-bezier(.24, .27, .38, .99);
+}

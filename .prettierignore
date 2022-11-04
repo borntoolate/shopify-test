@@ -1,0 +1,17 @@
+temp/
+node_modules/
+package.json
+package-lock.json
+*.html
+*.md
+.prettierrc
+build/
+html/**/wp-admin/
+html/**/wp-includes/
+html/**/wp-content/plugins/
+html/**/wp-content/languages/
+html/**/wp-content/themes/**/composer.json
+html/**/wp-content/themes/**/vendor/
+html/**/wp-content/themes/**/lib/
+html/**/wp-content/themes/**/acf-json/
+html/**/wp-content/themes/**/assets/dist/

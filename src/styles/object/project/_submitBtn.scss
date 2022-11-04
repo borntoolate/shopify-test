@@ -1,0 +1,61 @@
+/* ****************************************************************************************************
+
+  # submitBtn
+  - project
+
+**************************************************************************************************** */
+@use "global" as g;
+
+.p-submitBtn {
+  $this: &;
+
+  @include g.flex(
+    $flexDirection: row,
+    $justifyContent: center,
+    $alignItems: flex-start,
+    $flexWrap: nowrap,
+  );
+  /* ### mq
+  ---------------------------------------------------------------------- */
+  @include g.mq(mdMin) {
+    justify-content: flex-start;
+  }
+
+  /* ======================================================================
+
+    ## btn
+
+  ====================================================================== */
+  &__btn {
+    @include g.flex(
+      $flexDirection: row,
+      $justifyContent: center,
+      $alignItems: center,
+      $flexWrap: nowrap,
+    );
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    appearance : none;
+    background : none;
+    outline : none;
+    background-color: transparent;
+    border: 1px solid g.$colorTxt;
+    font-size: g.getRemByOneTenth(16);
+    line-height: 1.6;
+    text-align: center;
+    width: 100%;
+    max-width: g.getRemByOneTenth(220);
+    min-height: g.getRemByOneTenth(60);
+    font-family: g.$fontFamilySerif;
+    color: g.$colorTxt;
+    /* ### mq
+    ---------------------------------------------------------------------- */
+    @include g.mq(mdMin) {
+      max-width: g.getRemByOneTenth(460);
+      min-height: g.getRemByOneTenth(90);
+      font-size: g.getRemByOneTenth(20);
+      cursor: pointer;
+    }
+  }
+
+}

@@ -1,0 +1,27 @@
+/* ****************************************************************************************************
+
+  # orderedList
+  - project
+
+**************************************************************************************************** */
+@use "global" as g;
+
+.p-orderedList {
+  $this: &;
+
+  display: block;
+  list-style-type: decimal;
+  font-size: g.getRemByOneTenth(14);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0 0 0 1.4em;
+
+  &__item {
+    display: list-item;
+    padding-left: g.getRemByOneTenth(2);
+    & + & {
+      margin-top: g.getRemByOneTenth(7);
+    }
+  }
+
+}

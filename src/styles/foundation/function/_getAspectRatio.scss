@@ -1,0 +1,16 @@
+/* ****************************************************************************************************
+
+  # aspectRatio
+  - foundation > function
+  - padding-topで画像アスペクト比を維持
+
+**************************************************************************************************** */
+@use "sass:math";
+// .hoge {
+//   padding-top: get-aspectRatio(100, 56);
+// }
+
+@function getAspectRatio($width, $height) {
+  $ratio: math.div($height, $width);
+  @return $ratio * 100%;
+}

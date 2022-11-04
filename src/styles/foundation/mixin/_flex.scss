@@ -1,0 +1,20 @@
+/* ****************************************************************************************************
+
+  # flex
+  - foundation > mixin
+  - flexboxの基本的な設定
+
+**************************************************************************************************** */
+
+@mixin flex(
+  $flexDirection: row,
+  $justifyContent: flex-start,
+  $alignItems: flex-start,
+  $flexWrap: nowrap,
+) {
+  display : flex;
+  flex-direction : $flexDirection;
+  justify-content : $justifyContent;
+  align-items : $alignItems;
+  flex-wrap : $flexWrap;
+}

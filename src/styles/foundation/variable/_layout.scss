@@ -1,0 +1,49 @@
+/* ****************************************************************************************************
+
+  # layout
+  - foundation > variable > base
+
+**************************************************************************************************** */
+@use '../function/getVw' as g;
+@use '../function/getRem' as gr;
+@use 'sass:math';
+/* ======================================================================
+
+  ## ヘッダーのheight
+
+====================================================================== */
+$headerHeight: gr.getRemByOneTenth(100);
+$headerHeightFixed: gr.getRemByOneTenth(72);
+$headerHeightMqMaxMd: gr.getRemByOneTenth(62);
+$headerHeightFixedMqMinMd: gr.getRemByOneTenth(54);
+
+/* ======================================================================
+
+  ## コンテンツ幅
+
+====================================================================== */
+$viewport: 1280;
+$viewportMqMaxMd: 375;
+/* ### width
+---------------------------------------------------------------------- */
+// pc
+$contentWidthPx: 1160;
+$contentWidthRem: gr.getRemByOneTenth($contentWidthPx);
+$contentWidth: g.getVw(1160, $viewport, $unit: false);
+// limit
+$contentWidthLimitPx: 980;
+$contentWidthLimitRem: gr.getRemByOneTenth($contentWidthLimitPx);
+$contentWidthLimit: g.getVw($contentWidthLimitPx, $viewport, $unit: false);
+// limit sm
+$contentWidthLimitSmPx: 920;
+$contentWidthLimitSmRem: gr.getRemByOneTenth($contentWidthLimitSmPx);
+$contentWidthSm: g.getVw($contentWidthLimitSmPx, $viewport, $unit: false);
+// limit lg
+$contentWidthLimitLgPx: 1040;
+$contentWidthLimitLgRem: gr.getRemByOneTenth($contentWidthLimitLgPx);
+$contentWidthLimitLg: g.getVw($contentWidthLimitLgPx, $viewport, $unit: false);
+//- sp
+$contentWidthMqMaxMdPx: 345;
+$contentWidthMqMaxMd: g.getVw($contentWidthMqMaxMdPx, $viewportMqMaxMd, $unit: false);
+$contentWidthSmMqMaxMdPx: 315;
+$contentWidthSmMqMaxMd: g.getVw($contentWidthSmMqMaxMdPx, $viewportMqMaxMd, $unit: false);

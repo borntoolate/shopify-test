@@ -1,0 +1,13 @@
+/* ****************************************************************************************************
+
+  # fontVw
+  - foundation > mixin
+  - pxをvwに変換してフォントサイズを指定
+
+**************************************************************************************************** */
+@use "foundation/function/getVw" as g;
+
+@mixin fontVw($font_size: 10, $viewsize: 375) {
+  //font-size: $font_size * 1px;
+  font-size : g.getVw($font_size, $viewsize);
+}

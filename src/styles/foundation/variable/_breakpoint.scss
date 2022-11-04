@@ -1,0 +1,25 @@
+/* ****************************************************************************************************
+
+  # breakpoint
+  - foundation > variable
+
+**************************************************************************************************** */
+
+$breakpoint-sm: 640px !default;
+$breakpoint-md: 750px !default;
+$breakpoint-lg: 990px !default;
+$breakpoint-xl: 1280px !default;
+
+$breakpoints: (
+  "xsm": "screen and (max-width: 374px)",
+  "sm": "screen and (max-width: 639px)",
+  "smMin": "screen and (min-width: 640px)",
+  "md": "screen and (max-width: 749px)",
+  "mdMin": "screen and (min-width: 750px)",
+  "lg": "screen and (max-width: 989px)",
+  "lgMin": "screen and (min-width: 990px)",
+  "xlg": "screen and (max-width: 1279px)",
+  "xlgMin": "screen and (min-width: 1280px)",
+  "xxlg": "screen and (max-width: 1439px)",
+  "xxlgMin": "screen and (min-width: 1440px)"
+) !default;
